@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>RevitMultiVersionPlugin</Name>
+    <Assembly>RevitMultiVersionPlugin\RevitMultiVersionPlugin.dll</Assembly>
+    <FullClassName>RevitMultiVersionPlugin.App</FullClassName>
+    <AddInId>0736bead-6977-4cf9-a2ef-cb1486f62a48</AddInId>
+    <ClientId>55fac105-64cf-4f24-b0b2-05f8231cbb84</ClientId>
+    <VendorId>RevitMultiVersionPlugin</VendorId>
+    <VendorDescription>RevitMultiVersionPlugin</VendorDescription>
+  </AddIn>
+</RevitAddIns>

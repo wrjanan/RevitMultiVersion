@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+      None
+    </ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{3F865D22-8849-4DFA-9E7C-3533A8A159EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RevitMultiVersionPlugin</RootNamespace>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyName>RevitMultiVersionPlugin</AssemblyName>
+  </PropertyGroup>
+  <!-- default -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VERSION2018</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProgramW6432)\Autodesk\Revit 2018\Revit.exe</StartProgram>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProgramW6432)\Autodesk\Revit 2015\Revit.exe</StartProgram>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>0</WarningLevel>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <!-- 2016 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2016|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug-2016\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VERSION2016</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2016|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug-2016\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VERSION2016</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2016|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug-2016\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VERSION2016</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <!-- 2017 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2017|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug-2017\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VERSION2017</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2017|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug-2017\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;VERSION2017</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2017|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug-2017\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VERSION2017</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <!-- 2018 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2018|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug-2018\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VERSION2018</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2018|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug-2018\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;VERSION2018</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2018|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug-2018\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VERSION2018</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <!-- 2019 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2019|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug-2019\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VERSION2019</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2019|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug-2019\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VERSION2019</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2019|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug-2019\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VERSION2019</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <!-- 2020 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2020|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug-2020\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VERSION2020</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2020|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug-2020\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VERSION2020</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2020|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug-2020\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VERSION2020</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="Commands\SayHelloCmd.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\RevitUI.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RevitMultiVersionPlugin.addin">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Debug -->
+    <Reference Include="PresentationCore" />
+    <Reference Include="RevitAPI" Condition="'$(Configuration)' == 'Debug'">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\Revit 2018\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Debug'">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\Revit 2018\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIIFC" Condition="'$(Configuration)' == 'Debug'">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\Revit 2018\RevitAPIIFC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <!-- 2016 -->
+    <Reference Include="RevitAPI" Condition="'$(Configuration)' == 'Debug-2016'">
+      <HintPath>.\Libs\Revit2016\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Debug-2016'">
+      <HintPath>.\Libs\Revit2016\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIIFC" Condition="'$(Configuration)' == 'Debug-2016'">
+      <HintPath>.\Libs\Revit2016\RevitAPIIFC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <!-- RELEASE -->
+    <!-- 2017 -->
+    <Reference Include="RevitAPI" Condition="'$(Configuration)' == 'Debug-2017'">
+      <HintPath>.\Libs\Revit2017\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Debug-2017'">
+      <HintPath>.\Libs\Revit2017\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIIFC" Condition="'$(Configuration)' == 'Debug-2017'">
+      <HintPath>.\Libs\Revit2017\RevitAPIIFC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <!-- RELEASE -->
+    <!-- 2018 -->
+    <Reference Include="RevitAPI" Condition="'$(Configuration)' == 'Debug-2018'">
+      <HintPath>.\Libs\Revit2018\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Debug-2018'">
+      <HintPath>.\Libs\Revit2018\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIIFC" Condition="'$(Configuration)' == 'Debug-2018'">
+      <HintPath>.\Libs\Revit2018\RevitAPIIFC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <!-- 2018 -->
+    <Reference Include="RevitAPI" Condition="'$(Configuration)' == 'Debug-2019'">
+      <HintPath>.\Libs\Revit2019\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Debug-2019'">
+      <HintPath>.\Libs\Revit2019\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIIFC" Condition="'$(Configuration)' == 'Debug-2019'">
+      <HintPath>.\Libs\Revit2019\RevitAPIIFC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <!-- 2018 -->
+    <Reference Include="RevitAPI" Condition="'$(Configuration)' == 'Debug-2020'">
+      <HintPath>.\Libs\Revit2020\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Debug-2020'">
+      <HintPath>.\Libs\Revit2020\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIIFC" Condition="'$(Configuration)' == 'Debug-2020'">
+      <HintPath>.\Libs\Revit2020\RevitAPIIFC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="WindowsBase" />
+    <!-- RELEASE -->
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <!-- change the name of the folders & addin should you want to change the file name -->
+    <PostBuildEvent>
+      echo Configuration: $(Configuration)
+
+      if $(Configuration) == Debug goto 2018
+      if $(Configuration) == Debug-2016 goto 2016
+      if $(Configuration) == Debug-2017 goto 2017
+      if $(Configuration) == Debug-2018 goto 2018
+      if $(Configuration) == Debug-2019 goto 2019
+      if $(Configuration) == Debug-2020 goto 2020
+
+
+      :2016
+      echo Creating addin folder to 2016
+      if EXIST "%25programdata%25\Autodesk\Revit\Addins\2016\RevitMultiVersionPlugin\" (
+      rmdir /Q /S "%25programdata%25\Autodesk\Revit\Addins\2016\RevitMultiVersionPlugin\"
+      )
+      mkdir "%25programdata%25\Autodesk\Revit\Addins\2016\RevitMultiVersionPlugin\"
+
+      echo Copying results to 2016
+      copy "$(ProjectDir)RevitMultiVersionPlugin.addin" "%25programdata%25\Autodesk\Revit\Addins\2016\"
+      copy "$(TargetDir)*.dll" "%25programdata%25\Autodesk\Revit\Addins\2016\RevitMultiVersionPlugin\"
+
+      mkdir "%25userprofile%25\RevitMultiVersionPlugin\Addins\2016\"
+      mkdir "%25userprofile%25\RevitMultiVersionPlugin\Addins\2016\RevitMultiVersionPlugin"
+      copy "$(ProjectDir)RevitMultiVersionPlugin.addin" "%25userprofile%25\RevitMultiVersionPlugin\Addins\2016\"
+      copy "$(TargetDir)*.dll" "%25userprofile%25\RevitMultiVersionPlugin\Addins\2016\RevitMultiVersionPlugin"
+      goto exit
+
+
+      :2017
+      echo Creating addin folder to 2017
+      if EXIST "%25programdata%25\Autodesk\Revit\Addins\2017\RevitMultiVersionPlugin\" (
+      rmdir /Q /S "%25programdata%25\Autodesk\Revit\Addins\2017\RevitMultiVersionPlugin\"
+      )
+      mkdir "%25programdata%25\Autodesk\Revit\Addins\2017\RevitMultiVersionPlugin\"
+
+      echo Copying results to 2017
+      copy "$(ProjectDir)RevitMultiVersionPlugin.addin" "%25programdata%25\Autodesk\Revit\Addins\2017\"
+      copy "$(TargetDir)*.dll" "%25programdata%25\Autodesk\Revit\Addins\2017\RevitMultiVersionPlugin\"
+
+      mkdir "%25userprofile%25\RevitMultiVersionPlugin\Addins\2017\"
+      mkdir "%25userprofile%25\RevitMultiVersionPlugin\Addins\2017\RevitMultiVersionPlugin"
+      copy "$(ProjectDir)RevitMultiVersionPlugin.addin" "%25userprofile%25\RevitMultiVersionPlugin\Addins\2017\"
+      copy "$(TargetDir)*.dll" "%25userprofile%25\RevitMultiVersionPlugin\Addins\2017\RevitMultiVersionPlugin"
+      goto exit
+
+      :2018
+      echo Creating addin folder to 2018
+      if EXIST "%25programdata%25\Autodesk\Revit\Addins\2018\RevitMultiVersionPlugin\" (
+      rmdir /Q /S "%25programdata%25\Autodesk\Revit\Addins\2018\RevitMultiVersionPlugin\"
+      )
+      mkdir "%25programdata%25\Autodesk\Revit\Addins\2018\RevitMultiVersionPlugin\"
+
+      echo Copying results to 2018
+      copy "$(ProjectDir)RevitMultiVersionPlugin.addin" "%25programdata%25\Autodesk\Revit\Addins\2018\"
+      copy "$(TargetDir)*.dll" "%25programdata%25\Autodesk\Revit\Addins\2018\RevitMultiVersionPlugin\"
+
+
+      mkdir "%25userprofile%25\RevitMultiVersionPlugin\Addins\2018\"
+      mkdir "%25userprofile%25\RevitMultiVersionPlugin\Addins\2018\RevitMultiVersionPlugin"
+      copy "$(ProjectDir)RevitMultiVersionPlugin.addin" "%25userprofile%25\RevitMultiVersionPlugin\Addins\2018\"
+      copy "$(TargetDir)*.dll" "%25userprofile%25\RevitMultiVersionPlugin\Addins\2018\RevitMultiVersionPlugin"
+      goto exit
+
+      :2019
+      echo Creating addin folder 2019
+      if EXIST "%25programdata%25\Autodesk\Revit\Addins\2019\RevitMultiVersionPlugin\" (
+      rmdir /Q /S "%25programdata%25\Autodesk\Revit\Addins\2019\RevitMultiVersionPlugin\"
+      )
+      mkdir "%25programdata%25\Autodesk\Revit\Addins\2019\RevitMultiVersionPlugin\"
+
+      echo Copying results to 2019
+      copy "$(ProjectDir)RevitMultiVersionPlugin.addin" "%25programdata%25\Autodesk\Revit\Addins\2019\"
+      copy "$(TargetDir)*.dll" "%25programdata%25\Autodesk\Revit\Addins\2019\RevitMultiVersionPlugin\"
+
+
+      mkdir "%25userprofile%25\RevitMultiVersionPlugin\Addins\2019\"
+      mkdir "%25userprofile%25\RevitMultiVersionPlugin\Addins\2019\RevitMultiVersionPlugin"
+      copy "$(ProjectDir)RevitMultiVersionPlugin.addin" "%25userprofile%25\RevitMultiVersionPlugin\Addins\2019\"
+      copy "$(TargetDir)*.dll" "%25userprofile%25\RevitMultiVersionPlugin\Addins\2019\RevitMultiVersionPlugin"
+      goto exit
+
+      :2020
+      echo Creating addin folder 2020
+      if EXIST "%25programdata%25\Autodesk\Revit\Addins\2020\RevitMultiVersionPlugin\" (
+      rmdir /Q /S "%25programdata%25\Autodesk\Revit\Addins\2020\RevitMultiVersionPlugin\"
+      )
+      mkdir "%25programdata%25\Autodesk\Revit\Addins\2020\RevitMultiVersionPlugin\"
+
+      echo Copying results to 2020
+      copy "$(ProjectDir)RevitMultiVersionPlugin.addin" "%25programdata%25\Autodesk\Revit\Addins\2020\"
+      copy "$(TargetDir)*.dll" "%25programdata%25\Autodesk\Revit\Addins\2020\RevitMultiVersionPlugin\"
+
+
+      mkdir "%25userprofile%25\RevitMultiVersionPlugin\Addins\2020\"
+      mkdir "%25userprofile%25\RevitMultiVersionPlugin\Addins\2020\RevitMultiVersionPlugin"
+      copy "$(ProjectDir)RevitMultiVersionPlugin.addin" "%25userprofile%25\RevitMultiVersionPlugin\Addins\2020\"
+      copy "$(TargetDir)*.dll" "%25userprofile%25\RevitMultiVersionPlugin\Addins\2020\RevitMultiVersionPlugin"
+      goto exit
+
+      :exit
+
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>
